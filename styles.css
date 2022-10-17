@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+:root {
+  --white: #f8f8f8;
+  --grey: #707070;
+  --light-blue: #1792d2;
+  --dark-blue: #143774;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", "sans-serif";
+  font-size: 1rem;
+}
+
+header {
+  background-color: var(--white);
+  padding: 2em 0;
+}
+
+/* Typography */
+
+h1 {
+  font-family: "Lora", sans-serif;
+  font-weight: 400;
+  color: var(--dark-blue);
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-weight: 700;
+  color: var(--light-blue);
+  font-size: 0.75rem;
+}
+
+/* Layout */
+
+.site-title {
+  /* border: 2px solid magenta; */
+}
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+  max-width: 900px;
+  border: 2px solid magenta;
+}
+
+.container-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul {
+  /* border: 2px solid magenta; */
+  /* padding: 0; */
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--grey);
+  font-weight: 700;
+  padding: 0.25em 0;
+  white-space: nowrap;
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--light-blue);
+}
+
+.current-page {
+  border-bottom: 2px solid var(--light-blue);
+}
+
+@media (max-width: 680px) {
+  .container-nav {
+    flex-direction: column;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  nav ul {
+    margin: 1em 0;
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0.5em 0;
+  }
+}
